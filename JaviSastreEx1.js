@@ -3,10 +3,9 @@
  */
 
 
-//function vectorToMatrix11 (input){
-function vectorToMatrix11 (a,b,c,d,e,f,g,h,i){
+function vectorToMatrix11 (input){
 var vector = input;
-	
+var matriu = 
 	
 	return 
 }
