@@ -2,16 +2,19 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<script src="JaviSastreEx1.js"></script>
+<script src="JaviSastre.js"></script>
 <title>Javi Sastre</title>
 </head>
 <body>
 
 <script>
 
-var vector = [928,1151,1374,828,1032,1236,840,1056,1272,0];
-
-document.write (vectorToMatrix11(vector));
+var vector = [928,1151,1374,828,1032,1236,840,1056,1272, 0];
+document.write ("El vector donat es " + vector + ".");
+document.write ("<br>" + "<br>" + "La matriu donada es:" + "<br>" + vectorToMatrix12(vector));
+document.write ("<br>" + "<br>" + testVectorComplet(vector));
+document.write ("<br>" + "L'autor/a del codi es " + vectorId(vector[9]) + ".");
+document.write ("<br>");
 
 </script>
 </body>
