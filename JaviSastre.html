@@ -2,18 +2,42 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<script src="JaviSastreEx1.js"></script>
+<script src="vectorToMatrix12.js"></script>
+<script src="testVectorLength12.js"></script>
+<script src="checkVectorID12.js"></script>
+<script src="getC12.js"></script>
+<script src="getD12.js"></script>
+<script src="matrixToVector12.js"></script>
+<script src="encode12.js"></script>
 <title>Javi Sastre</title>
 </head>
-<body>
 
+<body>
+<h3>Projecte Final - Javi Sastre</h3>
 <script>
 
-var vector = [928,1151,1374,828,1032,1236,840,1056,1272,0];
+var vector = [928,1151,1374,828,1032,1236,840,1056,1272, 13];
+var matriuEntrant = vectorToMatrix12(vector);
+var matriuC12 = getC12();
 
-document.write (vectorToMatrix11(vector));
+document.write ("El vector d'entrada es " + vector + ".");
+document.write ("<br>" + "<br>");
+document.write ("La matriu donada es:" + "<br>" + "<br>" + matriuEntrant);
+document.write ("<br>" + "<br>")
+document.write ("El vector introduit es correcte? " + testVectorLength(vector));
+document.write ("<br>" + "L'autor/a del codi es " + vectorId(vector[9]) + ".");
+document.write ("<br>");
+document.write ("<br>");
+document.write ("La matriu C12 es:" + "<br>" + "<br>" + getC12()[0]+ "<br>" + getC12()[1]+ "<br>" + getC12()[2]);
+document.write ("<br>");
+document.write ("<br>");
+
+//document.write ("La multiplicacio de la MatriuEntrant i de la MatriuC12 es: + "<br>" + encode12(matriuEntrant, matriuC12);
+
+document.write ("<br>");
+document.write ("<br>");
+document.write ("El vector de sortida es " + matrixToVector12([[0,0,0],[0,0,0],[0,0,0]],12));
 
 </script>
 </body>
 </html>
-
