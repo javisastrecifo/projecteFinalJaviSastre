@@ -14,3 +14,4 @@ function vectorToMatrix12(input) {
 
 	return matriu[0] + "<br>" + matriu[1] + "<br>" + matriu[2];
 }
+

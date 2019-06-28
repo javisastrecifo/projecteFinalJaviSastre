@@ -9,6 +9,7 @@
 <script src="getD12.js"></script>
 <script src="matrixToVector12.js"></script>
 <script src="encode12.js"></script>
+<script src="JaviSastre.js"></script>
 <title>Javi Sastre</title>
 </head>
 
@@ -37,6 +38,13 @@ document.write ("<br>");
 document.write ("<br>");
 document.write ("<br>");
 document.write ("El vector de sortida es " + matrixToVector12([[0,0,0],[0,0,0],[0,0,0]],12));
+
+var vector = [928,1151,1374,828,1032,1236,840,1056,1272, 0];
+document.write ("El vector donat es " + vector + ".");
+document.write ("<br>" + "<br>" + "La matriu donada es:" + "<br>" + vectorToMatrix12(vector));
+document.write ("<br>" + "<br>" + testVectorComplet(vector));
+document.write ("<br>" + "L'autor/a del codi es " + vectorId(vector[9]) + ".");
+document.write ("<br>");
 
 </script>
 </body>

@@ -15,3 +15,4 @@ function testVectorLength(input) {
 	}
 	return vectorCorrecte
 }
+
