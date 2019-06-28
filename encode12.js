@@ -2,22 +2,30 @@
  * 
  */
 
-// Funció que multiplica la matriu entrant per la matriu donada pel professor
+// Funció que multiplica la matriu entrant per la matriu donada per codificar.
 // Autor: Javi Sastre
 // Paràmetres: retorna la variable 'matriuResultant'.
+function encode12(input1, input2) {
 
-
-function encode12(input1,input2) {
-	
 	var matriuEntrant = input1;
 	var matriuDonada = input2;
-	var matriuResultant = [];
+	var matriuResultant =[];
+
+	for (var j = 0; j < 3; j++) {
+		matriuResultant[j] =[];
+		for (var l = 0; l < 3; l++) {
+			matriuResultant[j][l] = 0;
+		}
+	}
+
 	
-	for (var fila = 0; fila<3; fila++){
-		for (var col = 0; col<3; col++){
-			
-			matriuResultant = [[(fila*col)+()+()],[],[]]
-			
+	for (var fila = 0; fila < 3; fila++) {
+		for (var colu = 0; colu < 3; colu++) {
+				for (i = 0; i < 3; i++) {
+				matriuResultant[fila][colu] += matriuEntrant[fila][i] * matriuDonada[i][colu];
+
+				}
+				
 		}
 	}
 
