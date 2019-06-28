@@ -9,7 +9,6 @@
 <script src="getD12.js"></script>
 <script src="matrixToVector12.js"></script>
 <script src="encode12.js"></script>
-<script src="JaviSastre.js"></script>
 <title>Javi Sastre</title>
 </head>
 
@@ -17,13 +16,15 @@
 <h3>Projecte Final - Javi Sastre</h3>
 <script>
 
-var vector = [928,1151,1374,828,1032,1236,840,1056,1272, 13];
+var vector = [928,1151,1374,828,1032,1236,840,1056,1272, 0];
 var matriuEntrant = vectorToMatrix12(vector);
 var matriuC12 = getC12();
+var matriuResultant = encode12(matriuEntrant,matriuC12);
+var vectorResultant = matrixToVector12(matriuResultant,12);
 
 document.write ("El vector d'entrada es " + vector + ".");
 document.write ("<br>" + "<br>");
-document.write ("La matriu donada es:" + "<br>" + "<br>" + matriuEntrant);
+document.write ("La matriu entrant es:" + "<br>" + "<br>" + matriuEntrant[0]+ "<br>" + matriuEntrant[1]+ "<br>" + matriuEntrant[2]);
 document.write ("<br>" + "<br>")
 document.write ("El vector introduit es correcte? " + testVectorLength(vector));
 document.write ("<br>" + "L'autor/a del codi es " + vectorId(vector[9]) + ".");
@@ -33,18 +34,11 @@ document.write ("La matriu C12 es:" + "<br>" + "<br>" + getC12()[0]+ "<br>" + ge
 document.write ("<br>");
 document.write ("<br>");
 
-//document.write ("La multiplicacio de la MatriuEntrant i de la MatriuC12 es: + "<br>" + encode12(matriuEntrant, matriuC12);
+document.write ("La multiplicacio de la Matriu Entrant i de la Matriu C12 es:" + "<br>" + encode12(matriuEntrant,matriuC12)[0] + "<br>" + encode12(matriuEntrant,matriuC12)[1] + "<br>" + encode12(matriuEntrant,matriuC12)[2]);
 
 document.write ("<br>");
 document.write ("<br>");
-document.write ("El vector de sortida es " + matrixToVector12([[0,0,0],[0,0,0],[0,0,0]],12));
-
-var vector = [928,1151,1374,828,1032,1236,840,1056,1272, 0];
-document.write ("El vector donat es " + vector + ".");
-document.write ("<br>" + "<br>" + "La matriu donada es:" + "<br>" + vectorToMatrix12(vector));
-document.write ("<br>" + "<br>" + testVectorComplet(vector));
-document.write ("<br>" + "L'autor/a del codi es " + vectorId(vector[9]) + ".");
-document.write ("<br>");
+document.write ("El vector de sortida es " + vectorResultant + ".");
 
 </script>
 </body>

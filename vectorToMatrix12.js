@@ -12,6 +12,6 @@ function vectorToMatrix12(input) {
 			[ vector[3], vector[4], vector[5] ],
 			[ vector[6], vector[7], vector[8] ] ];
 
-	return matriu[0] + "<br>" + matriu[1] + "<br>" + matriu[2];
+	return matriu;
 }
 
