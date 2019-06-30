@@ -4,7 +4,8 @@
 
 // Funció que multiplica la matriu entrant per la matriu donada per codificar.
 // Autor: Javi Sastre
-// Paràmetres: retorna la variable 'matriuResultant'.
+// Paràmetres: utilitza dos entrades de dades: matriu entrant i matriu donada pel professor
+// Després de la operació, retorna la variable 'matriuResultant'.
 
 function decode12(input1, input2) {
 
