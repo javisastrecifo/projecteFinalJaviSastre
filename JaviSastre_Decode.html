@@ -5,20 +5,20 @@
 <script src="vectorToMatrix12.js"></script>
 <script src="testVectorLength12.js"></script>
 <script src="checkVectorID12.js"></script>
-<script src="getC12.js"></script>
+<script src="getD12.js"></script>
 <script src="matrixToVector12.js"></script>
-<script src="encode12.js"></script>
-<title>Javi Sastre encodificacio</title>
+<script src="decode12.js"></script>
+<title>Javi Sastre descodificacio</title>
 </head>
 
 <body>
-<h3>Procés d'encodificació - Projecte Final de Javi Sastre</h3>
+<h3>Procés de descodificacio - Projecte Final de Javi Sastre</h3>
 <script>
 
 var vector = [928,1151,1374,828,1032,1236,840,1056,1272, 0];
 var matriuEntrant = vectorToMatrix12(vector);
-var matriuC12 = getC12();
-var matriuResultant = encode12(matriuEntrant,matriuC12);
+var matriuD12 = getD12();
+var matriuResultant = decode12(matriuEntrant,matriuD12);
 var vectorResultant = matrixToVector12(matriuResultant,12);
 
 document.write ("El vector d'entrada es " + vector + ".");
@@ -29,11 +29,11 @@ document.write ("El vector introduit es correcte? " + testVectorLength(vector));
 document.write ("<br>" + "L'autor/a del codi es " + vectorId(vector[9]) + ".");
 document.write ("<br>");
 document.write ("<br>");
-document.write ("La matriu C12 es:" + "<br>" + "<br>" + matriuC12[0]+ "<br>" + matriuC12[1]+ "<br>" + matriuC12[2]);
+document.write ("La matriu D12 es:" + "<br>" + "<br>" + matriuD12[0]+ "<br>" + matriuD12[1]+ "<br>" + matriuD12[2]);
 document.write ("<br>");
 document.write ("<br>");
 
-document.write ("La multiplicacio de la Matriu Entrant i de la Matriu C12 es:" + "<br>" + encode12(matriuEntrant,matriuC12)[0] + "<br>" + encode12(matriuEntrant,matriuC12)[1] + "<br>" + encode12(matriuEntrant,matriuC12)[2]);
+document.write ("La multiplicacio de la Matriu Entrant i de la Matriu D12 es:" + "<br>" + decode12(matriuEntrant,matriuD12)[0] + "<br>" + decode12(matriuEntrant,matriuD12)[1] + "<br>" + decode12(matriuEntrant,matriuD12)[2]);
 
 document.write ("<br>");
 document.write ("<br>");
