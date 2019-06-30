@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="vectorToMatrix12.js"></script>
+<script src="testVectorLength12.js"></script>
+<script src="checkVectorID12.js"></script>
+<script src="getD12.js"></script>
+<script src="matrixToVector12.js"></script>
+<script src="decode12.js"></script>
+<title>Javi Sastre descodificacio</title>
+</head>
+
+<body>
+<h3>Procés de descodificacio - Projecte Final de Javi Sastre</h3>
+<script>
+
+var vector = [];
+vector[0] = parseInt(prompt("Introdueix el primer número del vector a descodificar", "928"));
+vector[1] = parseInt(prompt("Introdueix el segon número del vector a descodificar", "1151"));
+vector[2] = parseInt(prompt("Introdueix el tercer número del vector a descodificar", "1374"));
+vector[3] = parseInt(prompt("Introdueix el quart número del vector a descodificar", "828"));
+vector[4] = parseInt(prompt("Introdueix el cinquè número del vector a descodificar", "1032"));
+vector[5] = parseInt(prompt("Introdueix el sisè número del vector a descodificar", "1236"));
+vector[6] = parseInt(prompt("Introdueix el setè número del vector a descodificar", "840"));
+vector[7] = parseInt(prompt("Introdueix el vuitè número del vector a descodificar", "1056"));
+vector[8] = parseInt(prompt("Introdueix el novè número del vector a descodificar", "1272"));
+vector[9] = parseInt(prompt("Introdueix el desè número del vector a descodificar", "0"));
+		
+var matriuEntrant = vectorToMatrix12(vector);
+var matriuD12 = getD12();
+var matriuResultant = decode12(matriuEntrant,matriuD12);
+var vectorResultant = matrixToVector12(matriuResultant,12);
+
+document.write ("El vector d'entrada es " + vector + ".");
+document.write ("<br>" + "<br>");
+document.write ("Per tant, la matriu entrant es:" + "<br>" + "<br>" + matriuEntrant[0]+ "<br>" + matriuEntrant[1]+ "<br>" + matriuEntrant[2]);
+document.write ("<br>" + "<br>")
+document.write ("El vector introduit es correcte? " + testVectorLength(vector));
+document.write ("<br>" + "L'autor/a del codi es " + vectorId(vector[9]) + ".");
+document.write ("<br>");
+document.write ("<br>");
+document.write ("La matriu D12 es:" + "<br>" + "<br>" + matriuD12[0]+ "<br>" + matriuD12[1]+ "<br>" + matriuD12[2]);
+document.write ("<br>");
+document.write ("<br>");
+
+document.write ("La multiplicacio de la Matriu Entrant i de la Matriu D12 es:" + "<br>" + decode12(matriuEntrant,matriuD12)[0] + "<br>" + decode12(matriuEntrant,matriuD12)[1] + "<br>" + decode12(matriuEntrant,matriuD12)[2]);
+
+document.write ("<br>");
+document.write ("<br>");
+document.write ("El vector de sortida es " + vectorResultant + ".");
+
+</script>
+</body>
+</html>
