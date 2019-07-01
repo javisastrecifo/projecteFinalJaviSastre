@@ -15,4 +15,3 @@ function matrixToVector12(input1,input2) {
 
 	return vector;
 }
-
